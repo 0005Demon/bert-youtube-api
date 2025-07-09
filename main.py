@@ -13,7 +13,7 @@ model.eval()
 
 # Load label encoder classes
 le = LabelEncoder()
-le.classes_ = np.load("bert-youtube-model/label_classes.npy", allow_pickle=True)
+le.classes_ = np.load("label_classes.npy", allow_pickle=True)
 
 @app.post("/predict")
 async def predict(data: dict):
