@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bert-api
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: TRANSFORMERS_CACHE
+        value: /opt/render/project/.cache
+    plan: free
